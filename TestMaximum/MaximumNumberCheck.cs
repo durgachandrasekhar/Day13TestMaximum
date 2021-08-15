@@ -6,10 +6,9 @@ namespace FindMaximumNumber
 {
     class MaximumNumberCheck
     {
-        //Function To check Maximum Number
-        public int MaximumIngerNumber(int firstValue, int secondValue, int thirdValue)
+        
+        public T MaximumNumber<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable
         {
-            //Comaring 3 Numbers
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {
                 return firstValue;
@@ -24,6 +23,5 @@ namespace FindMaximumNumber
             }
             throw new Exception("First, Second and Third number are same : ");
         }
-
     }
 }
