@@ -9,20 +9,26 @@ namespace FindMaximumNumber
             //Welcome Message
             Console.WriteLine("Welcome to Maximum Number");
 
-            //Calling Class to call a Function
-            MaximumNumberCheck maximumNumberCheck = new MaximumNumberCheck();
+            int[] intArray = { 34, 23, 12, 36 };
+            double[] doubleArray = { 12.5, 45.65, 987.45, 658.78 };
+            string[] stringArray = { "Apple", "Peach", "Banana" };
 
-            //Maximum Number At First Place
-            string outputString1 = maximumNumberCheck.MaximumStringNumber("925", "731", "635");
-            Console.WriteLine("Maximum Number of String at First Place : " + outputString1);
+            // Passing integer input with max number at first place
+            ExtendGenericMaximum<int> extendGenericMaximum = new ExtendGenericMaximum<int>(intArray);
+            int outputInt = extendGenericMaximum.MaxMethod();
 
-            //Maximum Number At Second Place
-            string outputString2 = maximumNumberCheck.MaximumStringNumber("25", "896", "735");
-            Console.WriteLine("Maximum Number of String at Seond Place : " + outputString2);
+            ExtendGenericMaximum<double> extendGenericMaximum1 = new ExtendGenericMaximum<double>(doubleArray);
+            double outputDouble = extendGenericMaximum1.MaxMethod();
 
-            //Maximum Number At Third Place
-            string outputString3 = maximumNumberCheck.MaximumStringNumber("125", "196", "735");
-            Console.WriteLine("Maximum Number of String at Third Place : " + outputString3);
+            ExtendGenericMaximum<string> extendGenericMaximum2 = new ExtendGenericMaximum<string>(stringArray);
+            string outputString = extendGenericMaximum2.MaxMethod();
+
+
+            //Display Output
+            Console.WriteLine("Integer Max : " + outputInt);
+            Console.WriteLine("Float Max : " + outputDouble);
+            Console.WriteLine("String Max : " + outputString);
+
         }
     }
 }
